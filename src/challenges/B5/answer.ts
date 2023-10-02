@@ -1,10 +1,10 @@
 /**
- * In this challenge, you have to split up a video in several successive segments 
+ * In this challenge, you have to split up a video in several successive segments
  * that can be either segments with notes or without.
- * 
+ *
  * Successive = the end time of a segment must be the start time of the next one.
  * Also FYI, duration are in the format "HH:mm:ss" (hours, minutes, seconds)
- * 
+ *
  * Example:
  * Input: {
  *      videoDuration: "01:33:12",
@@ -39,12 +39,12 @@ export default function ({ video }: { video: VideoWithNotes }): VideoSegment[] {
 
 // used interfaces, do not touch
 export interface VideoWithNotes {
-    videoDuration: string;
-    notes: { fromTime: string, toTime: string, note: string }[]
+  videoDuration: string;
+  notes: { fromTime: string; toTime: string; note: string }[];
 }
 
 export interface VideoSegment {
-    fromTime: string;
-    toTime: string;
-    note?: string;
+  fromTime: string;
+  toTime: string;
+  note?: string;
 }
